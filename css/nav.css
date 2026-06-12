@@ -23,13 +23,18 @@ nav {
 }
 
 .nav-logo-img {
-  height: 28px; /* 25% Increase for better brand presence */
+  height: 22px; /* Precision height for wordmark */
   width: auto;
   transition: all 0.3s ease;
 }
 
 .nav-logo:hover .nav-logo-img {
   filter: drop-shadow(0 0 12px var(--neon-red));
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {

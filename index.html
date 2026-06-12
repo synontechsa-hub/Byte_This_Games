@@ -88,21 +88,21 @@
 ═══════════════════════════════════════════════ -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="assets/Byte_This/Byte%20This%20Games%20Logo%20-%20Variant%20Red.svg" alt="Byte This Games" class="nav-logo-img">
+      <img src="assets/Byte_This/Byte%20This%20Games%20Wordmark%20-%20White%20Text.svg" alt="Byte This Games" class="nav-logo-img" style="height: 22px;">
     </a>
 
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about">about</a></li>
       <li><a href="#creator">the creator</a></li>
       <li><a href="#portfolio">studio projects</a></li>
       <li><a href="https://synontech.vercel.app/" target="_blank" rel="noopener" style="color: var(--neon-yellow);">software studio</a></li>
-      <li><a href="future.html">upcoming</a></li>
-      <li><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener"
-          style="color: var(--neon-pink);">support</a></li>
+      <li class="mobile-only"><a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" style="color: var(--neon-pink);">support</a></li>
       <li class="mobile-only"><a href="#" class="contact-link">contact</a></li>
     </ul>
 
-    <a href="#" class="nav-cta contact-link">contact</a>
+    <div class="nav-actions">
+      <a href="https://ko-fi.com/synonimity#" target="_blank" rel="noopener" class="nav-cta support-link" style="background: var(--neon-pink); margin-right: 1rem;">support</a>
+      <a href="#" class="nav-cta contact-link">contact</a>
+    </div>
 
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </nav>
@@ -120,11 +120,10 @@
     </div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">&lt;CMD_RUN_FUTURE_STATE&gt;<br>&lt;STATUS_ACTIVE&gt;</p>
 
       <h1 class="hero-title" data-text="CODE THE FUTURE. BREAK THE LIMITS.">
-        <span class="line1" style="color: var(--neon-red); text-shadow: 2px 0 var(--neon-cyan), -2px 0 var(--neon-pink);">CODE THE FUTURE.</span>
-        <span class="line2" style="color: #fff; text-shadow: 2px 0 var(--neon-red), -2px 0 var(--neon-cyan);">BREAK THE LIMITS.</span>
+        <span class="line1">CODE THE FUTURE.</span>
+        <span class="line2">BREAK THE LIMITS.</span>
       </h1>
 
       <div class="hero-middle-row">
@@ -144,7 +143,8 @@
         </div>
       </div>
 
-      <div class="hero-buttons">
+      <div class="hero-buttons-grid">
+        <!-- View Projects -->
         <div class="tactical-btn-wrapper">
           <div class="btn-module-tab" style="background: var(--neon-red); color: #fff;">SECURE_ACCESS_42</div>
           <a href="#portfolio" class="btn-primary-tactical" style="background: var(--neon-red); color: #fff;">
@@ -157,9 +157,43 @@
           <div class="btn-wires" style="background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%), repeating-linear-gradient(0deg, var(--neon-red) 0, var(--neon-red) 2px, transparent 2px, transparent 6px);"></div>
         </div>
 
-        <div class="init-wrapper">
-          <span class="init-tag">INIT ></span>
-          <a href="#about" class="btn-secondary-tactical">About Byte This Games</a>
+        <!-- About -->
+        <div class="tactical-btn-wrapper">
+          <div class="btn-module-tab">ST_INTEL_01</div>
+          <a href="#about" class="btn-primary-tactical">
+            <span class="btn-text">About Studio</span>
+            <div class="btn-progress-bar">
+              <div class="fill"></div>
+            </div>
+            <span class="btn-status">READ_ONLY</span>
+          </a>
+          <div class="btn-wires"></div>
+        </div>
+
+        <!-- Creator -->
+        <div class="tactical-btn-wrapper">
+          <div class="btn-module-tab">USER_PROFILE</div>
+          <a href="#creator" class="btn-primary-tactical">
+            <span class="btn-text">The Creator</span>
+            <div class="btn-progress-bar">
+              <div class="fill"></div>
+            </div>
+            <span class="btn-status">AUTHORIZED</span>
+          </a>
+          <div class="btn-wires"></div>
+        </div>
+
+        <!-- Upcoming -->
+        <div class="tactical-btn-wrapper">
+          <div class="btn-module-tab" style="background: var(--neon-pink); color: #fff;">HORIZON_SCAN</div>
+          <a href="future.html" class="btn-primary-tactical" style="background: var(--neon-pink); color: #fff;">
+            <span class="btn-text">Upcoming</span>
+            <div class="btn-progress-bar">
+              <div class="fill" style="background: #fff;"></div>
+            </div>
+            <span class="btn-status">IN_STREAM</span>
+          </a>
+          <div class="btn-wires" style="background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%), repeating-linear-gradient(0deg, var(--neon-pink) 0, var(--neon-pink) 2px, transparent 2px, transparent 6px);"></div>
         </div>
       </div>
     </div>
@@ -173,7 +207,7 @@
 ═══════════════════════════════════════════════ -->
   <section id="about">
     <div class="section-inner">
-      <p class="section-tag reveal">Transmission_01</p>
+      <p class="section-tag reveal">About_01</p>
       <h2 class="section-title reveal">About <span>Byte This Games</span></h2>
 
       <div class="about-grid">
@@ -268,7 +302,7 @@
     <div class="section-inner">
       <div class="portfolio-header">
         <div>
-          <p class="section-tag reveal">Transmission_03</p>
+          <p class="section-tag reveal">Projects_03</p>
           <h2 class="section-title reveal">Studio <span>projects</span></h2>
         </div>
       </div>
