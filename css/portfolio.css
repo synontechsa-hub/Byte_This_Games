@@ -149,6 +149,15 @@
   100% { transform: scale(1.02); filter: hue-rotate(45deg) blur(2px); }
 }
 
+/* Malevolent Card Plasma Override */
+.card--malevolent.card--featured .card-banner::after {
+  border-color: #FF3333;
+  box-shadow:
+    0 0 20px #FF3333,
+    inset 0 0 20px #FF3333,
+    0 0 40px #FF0055;
+}
+
 .card--featured .card-body {
   padding: 3rem;
   position: relative;

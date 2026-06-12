@@ -1,56 +1,49 @@
-synontech ecosystem proprietary source license
-copyright (c) 2026 syn / synonimity / synontech. all rights reserved.
+Byte This Games Proprietary Source License
+Copyright (c) 2026 Byte This Games / Synonimity. All rights reserved.
 
-this license applies to all projects within the synontech ecosystem, including but
+This license applies to all projects within the Byte This Games ecosystem, including but
 not limited to:
-  - project-soullink / Linker.AI
-  - KerfCut / syncad
-  - workerpassport
-  - legion
+  - Linker.AI
   - Malevolent: Scorned
-  - SynConvert
-  - any future projects, tools, or systems developed under the synontech name
+  - Any future games, engines, or systems developed under the Byte This Games name.
 
-by accessing, downloading, or using the software (the "software"), you agree to
+By accessing, downloading, or using the software (the "Software"), you agree to
 the following terms:
 
-1. ownership
-the software, including its source code, design, assets, and logic, is the
-exclusive property of syn (operating as synonimity / synontech).
+1. OWNERSHIP
+The Software, including its source code, design, assets, and logic, is the
+exclusive property of Byte This Games (operating under Synonimity).
 
-2. usage restrictions
-  a) you are granted a non-exclusive right to view the source code for
+2. USAGE RESTRICTIONS
+  a) You are granted a non-exclusive right to view the source code for
      educational or audit purposes.
-  b) you may not redistribute, sub-license, or sell the software or any portion
-     thereof without express written permission from syn.
-  c) you may not use the software to create competing products.
-  d) you may not remove any copyright notices or branding from the software.
-  e) you may not modify and redistribute the software as your own.
-  f) integrate, embed, or build upon any synontech system within a third-party
-     commercial application without a separate commercial agreement.
+  b) You may not redistribute, sub-license, or sell the Software or any portion
+     thereof without express written permission.
+  c) You may not use the Software to create competing products.
+  d) You may not remove any copyright notices or branding from the Software.
+  e) You may not modify and redistribute the Software as your own.
+  f) You may not integrate, embed, or build upon any Byte This Games system within
+     a third-party commercial application without a separate commercial agreement.
 
-3. open source exceptions
-if a specific sub-module or file within this repository contains its own
-license (e.g., mit, apache, gpl), that license takes precedence for that
+3. OPEN SOURCE EXCEPTIONS
+If a specific sub-module or file within this repository contains its own
+license (e.g., MIT, Apache, GPL), that license takes precedence for that
 specific file or module only.
 
-4. derivative works
-any derivative works based on synontech logic or architecture remain the
-property of syn unless otherwise agreed upon in writing.
+4. DERIVATIVE WORKS
+Any derivative works based on Byte This Games logic or architecture remain the
+property of the original creator unless otherwise agreed upon in writing.
 
-5. no warranty
-the software is provided "as is", without warranty of any kind, express or
-implied. in no event shall the authors be liable for any claim, damages, or
-other liability arising from the use of the software.
+5. NO WARRANTY
+The Software is provided "as is", without warranty of any kind, express or
+implied. In no event shall the authors be liable for any claim, damages, or
+other liability arising from the use of the Software.
 
-6. termination
-syn reserves the right to terminate access to the software at any time for
+6. TERMINATION
+Byte This Games reserves the right to terminate access to the Software at any time for
 individuals or entities found in violation of this license.
 
-any unauthorized use, reproduction, modification, or distribution of any synontech
+Any unauthorized use, reproduction, modification, or distribution of any Byte This Games
 intellectual property will be treated as a violation of copyright law.
 
-for licensing inquiries, partnership proposals, or commercial permissions, please
-contact syn directly through the official synontech channels.
-
-— syn / synontech, 2026
+— Byte This Games, 2026
