@@ -90,30 +90,18 @@
   margin-bottom: 2rem;
   color: #fff;
   position: relative;
-  text-shadow:
-    2px 0 var(--neon-pink),
-    -2px 0 var(--neon-yellow);
-  animation: chromaticPulse 5s infinite;
 }
 
-@keyframes chromaticPulse {
-  0%, 100% { text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-yellow); }
-  50% { text-shadow: 4px 0 var(--neon-pink), -4px 0 var(--neon-yellow), 0 0 10px rgba(255,255,255,0.2); }
-}
-
-.hero-title .line1, .hero-title .line2 {
+.hero-title .line1 {
+  color: var(--neon-red);
+  text-shadow: 2px 0 var(--neon-cyan), -2px 0 var(--neon-pink);
   display: block;
 }
 
-.hero-title::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 100%;
-  height: 100%;
-  color: rgba(255,255,255,0.05);
-  z-index: -1;
+.hero-title .line2 {
+  color: #fff;
+  text-shadow: 2px 0 var(--neon-red), -2px 0 var(--neon-cyan);
+  display: block;
 }
 
 /* ── Sub & Manifesto ── */
@@ -130,6 +118,23 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Tactical Buttons Grid ── */
+.hero-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tactical-btn-wrapper {
+  position: relative;
+  width: 100%;
+}
   gap: 1.5rem; /* Reduced gap to pull video closer to text */
   margin-bottom: 3rem;
 }
@@ -224,13 +229,6 @@
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   color: #fff;
-}
-
-/* ── Tactical Buttons ── */
-.hero-buttons {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
 }
 
 /* View Projects Button */
@@ -374,6 +372,6 @@
   .hero-middle-row { flex-direction: column; align-items: center; gap: 2rem; }
   .hero-desc-block { border-left: none; padding-left: 0; }
   .hero-video-container { max-width: 100%; }
-  .hero-buttons { flex-direction: column; gap: 2rem; }
+  .hero-buttons-grid { grid-template-columns: 1fr; gap: 4rem; justify-items: center; }
   .hero-stats { position: relative; bottom: 0; right: 0; margin-top: 4rem; justify-content: center; }
 }
