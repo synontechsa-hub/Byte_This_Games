@@ -1,0 +1,45 @@
+/* ============================================================
+   BYTE THIS GAMES — Brand Identity Variables
+   The "Glitch-Red" Tactical Aesthetic
+   ============================================================ */
+
+:root {
+  /* --- Brand Core (The Pulse) --- */
+  --neon-red:     #ff003c; /* Primary Brand Color - "High Voltage" */
+  --neon-yellow:  #fcee0a; /* Warning / Alert Color */
+  --neon-pink:    #ff0055; /* Glitch / Aberration Accent */
+
+  /* --- Cyber Spectrum --- */
+  --neon-cyan:    #00f3ff; /* Data / Processing Blue */
+  --neon-blue:    #005eff; /* Deep System Blue */
+  --neon-green:   #00ff88; /* Success / Terminal Green */
+  --neon-magenta: #ff00ff; /* Sub-level UI Color */
+
+  /* --- Industrial Foundation (Gritty Neutral) --- */
+  --black-void:   #040404; /* Absolute Black for high contrast */
+  --navy-deep:    #020b18; /* Depth shadow */
+  --concrete:     #121212; /* Dark panel base */
+  --gunmetal:     #222222; /* Lighter panel highlights */
+  --steel:        #444444; /* Borders and dividers */
+
+  /* --- Functional Assignments (The Pivot to Red) --- */
+  --primary:      var(--neon-red);    /* Swapped from Yellow to Red */
+  --secondary:    var(--neon-yellow); /* Swapped from Red to Yellow */
+  --accent:       var(--neon-pink);
+
+  --bg-main:      var(--black-void);
+  --bg-card:      rgba(15, 15, 15, 0.95);
+  --text-main:    #f5f5f5; /* Brightened for contrast against Red */
+  --text-dim:     #999999;
+
+  /* --- Tactical Glows & FX --- */
+  --glow-red:     0 0 12px rgba(255, 0, 60, 0.6), 0 0 25px rgba(255, 0, 60, 0.3);
+  --glow-yellow:  0 0 10px rgba(252, 238, 10, 0.4);
+  --glow-cyan:    0 0 10px rgba(0, 243, 255, 0.4);
+  --glow-pink:    0 0 15px rgba(255, 0, 85, 0.4);
+
+  /* --- Borders & Geometry --- */
+  --border-main:  1px solid rgba(255, 255, 255, 0.08);
+  --border-neon:  1px solid var(--primary); /* Now follows Neon Red */
+  --glass-panel:  blur(10px) saturate(180%);
+}

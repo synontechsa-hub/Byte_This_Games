@@ -1,0 +1,113 @@
+/* ============================================================
+   synontech — future.css
+   Neon Billboard layouts for the upcoming projects page.
+   ============================================================ */
+
+.billboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+  perspective: 1000px;
+}
+
+.neon-billboard {
+  position: relative;
+  background: rgba(10, 10, 10, 0.8);
+  border: 2px solid var(--primary);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 20px var(--primary);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 250px;
+}
+
+.neon-billboard:hover {
+  transform: scale(1.02) rotateX(5deg) rotateY(2deg);
+  box-shadow: 0 0 40px var(--primary);
+}
+
+.neon-billboard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.05) 2px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.billboard-badge {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 2;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.billboard-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 40px var(--primary);
+  z-index: 2;
+  margin-bottom: 1rem;
+  animation: neon-flicker 5s infinite alternate;
+}
+
+.billboard-desc {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 600px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-left: 4px solid var(--primary);
+}
+
+/* Variations */
+.billboard-red {
+  border-color: var(--secondary);
+  box-shadow: 0 0 20px var(--secondary);
+}
+.billboard-red:hover { box-shadow: 0 0 40px var(--secondary); }
+.billboard-red .billboard-badge { background: var(--secondary); box-shadow: 0 0 10px var(--secondary); }
+.billboard-red .billboard-title { text-shadow: 0 0 10px var(--secondary), 0 0 20px var(--secondary), 0 0 40px var(--secondary); }
+.billboard-red .billboard-desc { border-color: var(--secondary); }
+
+.billboard-magenta {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+.billboard-magenta:hover { box-shadow: 0 0 40px var(--accent); }
+.billboard-magenta .billboard-badge { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.billboard-magenta .billboard-title { text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent); }
+.billboard-magenta .billboard-desc { border-color: var(--accent); }
+
+.billboard-pink {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px var(--neon-pink);
+}
+.billboard-pink:hover { box-shadow: 0 0 40px var(--neon-pink); }
+.billboard-pink .billboard-badge { background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink); }
+.billboard-pink .billboard-title { text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink); }
+.billboard-pink .billboard-desc { border-color: var(--neon-pink); }

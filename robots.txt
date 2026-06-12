@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bytethisgames.github.io/sitemap.xml

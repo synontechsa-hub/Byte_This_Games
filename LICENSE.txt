@@ -1,0 +1,56 @@
+synontech ecosystem proprietary source license
+copyright (c) 2026 syn / synonimity / synontech. all rights reserved.
+
+this license applies to all projects within the synontech ecosystem, including but
+not limited to:
+  - project-soullink / Linker.AI
+  - KerfCut / syncad
+  - workerpassport
+  - legion
+  - Malevolent: Scorned
+  - SynConvert
+  - any future projects, tools, or systems developed under the synontech name
+
+by accessing, downloading, or using the software (the "software"), you agree to
+the following terms:
+
+1. ownership
+the software, including its source code, design, assets, and logic, is the
+exclusive property of syn (operating as synonimity / synontech).
+
+2. usage restrictions
+  a) you are granted a non-exclusive right to view the source code for
+     educational or audit purposes.
+  b) you may not redistribute, sub-license, or sell the software or any portion
+     thereof without express written permission from syn.
+  c) you may not use the software to create competing products.
+  d) you may not remove any copyright notices or branding from the software.
+  e) you may not modify and redistribute the software as your own.
+  f) integrate, embed, or build upon any synontech system within a third-party
+     commercial application without a separate commercial agreement.
+
+3. open source exceptions
+if a specific sub-module or file within this repository contains its own
+license (e.g., mit, apache, gpl), that license takes precedence for that
+specific file or module only.
+
+4. derivative works
+any derivative works based on synontech logic or architecture remain the
+property of syn unless otherwise agreed upon in writing.
+
+5. no warranty
+the software is provided "as is", without warranty of any kind, express or
+implied. in no event shall the authors be liable for any claim, damages, or
+other liability arising from the use of the software.
+
+6. termination
+syn reserves the right to terminate access to the software at any time for
+individuals or entities found in violation of this license.
+
+any unauthorized use, reproduction, modification, or distribution of any synontech
+intellectual property will be treated as a violation of copyright law.
+
+for licensing inquiries, partnership proposals, or commercial permissions, please
+contact syn directly through the official synontech channels.
+
+— syn / synontech, 2026

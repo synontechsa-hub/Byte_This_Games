@@ -1,0 +1,526 @@
+/* ============================================================
+   Linker.AI — page-specific styles
+   builds on top of the shared synontech css.
+   ============================================================ */
+
+/* ── Page hero ── */
+#linker-hero {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  overflow: hidden;
+}
+
+.linker-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(252, 238, 10, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 238, 10, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 0%, transparent 100%);
+}
+
+/* Layered city-glow orbs */
+.linker-orb-1 {
+  position: absolute;
+  width: 700px; height: 400px;
+  background: radial-gradient(ellipse, rgba(0, 70, 220, 0.25) 0%, transparent 70%);
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+.linker-orb-2 {
+  position: absolute;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(192, 32, 255, 0.2) 0%, transparent 70%);
+  top: 10%; right: 5%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.linker-orb-3 {
+  position: absolute;
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, rgba(252, 238, 10, 0.18) 0%, transparent 70%);
+  top: 20%; left: 5%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.linker-eyebrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.4em;
+  color: var(--neon-yellow);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s ease forwards;
+  text-transform: uppercase;
+}
+
+.linker-eyebrow::before {
+  content: '[SECURE_LINK] ';
+  color: var(--neon-yellow);
+}
+
+.linker-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(2.2rem, 10vw, 8rem); /* Reduced min-size from 3.5rem for mobile safety */
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.35s ease forwards;
+  background: linear-gradient(135deg, #ffffff 0%, var(--neon-yellow) 50%, var(--neon-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(252, 238, 10, 0.4));
+  text-transform: uppercase;
+}
+
+.linker-tagline {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: rgba(207, 232, 255, 0.5);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.5s ease forwards;
+}
+
+.linker-desc {
+  font-size: 1.1rem;
+  color: rgba(207, 232, 255, 0.7);
+  max-width: 580px;
+  line-height: 1.8;
+  margin: 0 auto 3rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.65s ease forwards;
+}
+
+/* ── CTA buttons ── */
+.linker-ctas {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.8s ease forwards;
+}
+
+.btn-itch {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #000;
+  background: var(--neon-yellow);
+  border: none;
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 100%, 0 100%);
+  transition: all 0.25s;
+  box-shadow: 0 0 20px rgba(252, 238, 10, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+}
+
+.btn-itch:hover {
+  box-shadow: var(--glow-yellow);
+  transform: translate(2px, -2px);
+}
+
+.btn-patreon {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--neon-pink);
+  background: transparent;
+  border: 1px solid var(--neon-pink);
+  padding: 1rem 2.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+}
+
+.btn-patreon:hover {
+  background: rgba(255, 0, 85, 0.1);
+  box-shadow: var(--glow-pink);
+  transform: translate(-2px, -2px);
+}
+
+/* ── Status pill ── */
+.linker-status {
+  margin-top: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s 1s ease forwards;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #00ff88;
+}
+
+.linker-status-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+  animation: pulse 2s infinite;
+}
+
+/* ── Screenshot / media strip ── */
+#linker-media {
+  padding: 4rem 3rem;
+}
+
+.media-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.media-card {
+  position: relative;
+  background: var(--navy2);
+  border: 1px solid var(--steel);
+  overflow: hidden;
+  aspect-ratio: 9 / 16; /* Vertical ratio for architectural fidelity */
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.media-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--neon-yellow);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(252, 238, 10, 0.3), inset 0 0 15px rgba(252, 238, 10, 0.2);
+  z-index: 2;
+}
+
+.media-card:hover {
+  border-color: var(--neon-yellow);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.media-card:hover::after {
+  opacity: 1;
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.media-placeholder {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(207, 232, 255, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ── Features ── */
+#linker-features {
+  background: linear-gradient(180deg, transparent, rgba(4, 20, 40, 0.5) 50%, transparent);
+  border-top: 1px solid rgba(252, 238, 10, 0.08);
+  border-bottom: 1px solid rgba(252, 238, 10, 0.08);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: rgba(4, 20, 40, 0.6);
+  border: 1px solid rgba(252, 238, 10, 0.12);
+  padding: 1.75rem;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.feature-card:hover {
+  border-color: rgba(252, 238, 10, 0.35);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--neon-yellow);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.feature-desc {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* ── Bottom CTA banner ── */
+#linker-cta-banner {
+  text-align: center;
+  padding: 6rem 3rem;
+  background: rgba(5, 5, 5, 0.5);
+}
+
+.cta-banner-title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.cta-banner-title span {
+  background: linear-gradient(90deg, var(--neon-yellow), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-banner-sub {
+  color: rgba(207, 232, 255, 0.5);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── back to synontech nav link ── */
+.back-link {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: rgba(207, 232, 255, 0.45);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--neon-yellow); }
+
+/* ── Linker nav override ── */
+.linker-nav-logo {
+  height: 24px;
+  width: auto;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.linker-hero-logo {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  animation: logoGlow 4s infinite alternate;
+}
+
+@keyframes logoGlow {
+  from { filter: drop-shadow(0 0 15px rgba(252, 238, 10, 0.2)); }
+  to { filter: drop-shadow(0 0 30px rgba(252, 238, 10, 0.4)); }
+}
+
+/* ── Hero background image ── */
+.linker-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/map_screens/map_screen_evening_foggy_02.png');
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(0.2) saturate(1.2);
+}
+
+/* ── Nav logo image ── */
+.nav-logo-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.linker-nav-logo {
+  height: 22px;
+  width: auto;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── NPC Cast strip ── */
+#linker-cast {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+#linker-cast .section-inner {
+  padding: 0 3rem;
+  margin-bottom: 2.5rem;
+}
+
+#linker-cast .cast-sub {
+  color: rgba(207, 232, 255, 0.5);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  max-width: 500px;
+}
+
+.cast-strip {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 3rem 2.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 212, 255, 0.25) transparent;
+  justify-content: center;
+}
+
+.cast-strip::-webkit-scrollbar {
+  height: 4px;
+}
+.cast-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cast-strip::-webkit-scrollbar-thumb {
+  background: rgba(252, 238, 10, 0.25);
+  border-radius: 2px;
+}
+
+.cast-card {
+  position: relative;
+  flex: 0 0 260px; /* Slightly wider */
+  height: 380px; /* Slightly taller */
+  overflow: hidden;
+  background: var(--navy2);
+  border: 1px solid var(--steel);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 2px;
+}
+
+.cast-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--neon-yellow);
+  opacity: 0.15;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cast-card:hover {
+  transform: scale(1.04) translateY(-10px);
+  border-color: var(--neon-yellow);
+}
+
+.cast-card:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(252, 238, 10, 0.4), inset 0 0 20px rgba(252, 238, 10, 0.2);
+}
+
+.cast-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%; /* Keep faces in frame */
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.cast-card:hover img {
+  transform: scale(1.08);
+}
+
+.cast-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 3rem 1.25rem 1.25rem;
+  background: linear-gradient(0deg, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.7) 50%, transparent 100%);
+  transform: translateY(15%); /* Reduced from 30% to keep text in frame */
+  transition: transform 0.3s ease;
+}
+
+.cast-card:hover .cast-overlay {
+  transform: translateY(0);
+}
+
+.cast-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--neon-yellow);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.cast-role {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  #linker-media, #linker-features, #linker-cta-banner { padding: 4rem 1.5rem; }
+  #linker-cast { padding: 4rem 0; }
+  #linker-cast .section-inner { padding: 0 1.5rem; }
+  .cast-strip { padding: 1rem 1.5rem 2rem; justify-content: flex-start; }
+  .cast-card { flex: 0 0 200px; height: 300px; }
+  .linker-ctas { flex-direction: column; align-items: center; }
+  .btn-itch, .btn-patreon { width: 100%; max-width: 300px; justify-content: center; }
+}
