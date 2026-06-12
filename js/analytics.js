@@ -1,6 +1,6 @@
 (function () {
   // Add your GA4 Measurement ID here, for example: G-XXXXXXXXXX
-  const measurementId = 'G-M547HLMYPT';
+  const measurementId = 'G-VCC3EHV4VB';
 
   if (measurementId) {
     window.dataLayer = window.dataLayer || [];
